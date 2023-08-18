@@ -3,8 +3,8 @@
 describe('registration', () => {
   let registrationEmail;
   let registrationPassword;
-  registrationEmail = 'roezo2006@gmail.com'; // Update with actual email
-  registrationPassword = 'your-password';    // Update with actual password
+  registrationEmail = 'Anasalnaser'; 
+  registrationPassword = 'anas123';    
 
   it('sign up page', () => {
     cy.visit("https://automationteststore.com/index.php?rt=account/login");
@@ -13,7 +13,7 @@ describe('registration', () => {
     cy.get('#accountFrm > fieldset > .btn').click();
     cy.get('#AccountFrm_firstname').type('Anas');
     cy.get('#AccountFrm_lastname').type('Alnaser');
-    cy.get('#AccountFrm_email').type('registrationEmail'); // Update with actual email
+    cy.get('#AccountFrm_email').type('roezo2006@gmail.com'); 
     cy.get('#AccountFrm_telephone').type('+962786800818');
     cy.get('#AccountFrm_fax').type('+965541');
     cy.get('#AccountFrm_company').type('BIGO');
@@ -26,7 +26,7 @@ describe('registration', () => {
     cy.get('#AccountFrm_zone_id').select('Irbid')
     cy.get('#AccountFrm_agree').click();
 
-    // Capture the registration email and password
+
   });
 
   describe('login page', () => {
@@ -38,7 +38,6 @@ describe('registration', () => {
       cy.get('#loginFrm_password').type(registrationPassword);
       cy.get('#loginFrm > fieldset > .btn').click();
 
-      // ... add your login assertions or code here
     });
   });
 });
